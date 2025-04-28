@@ -1,0 +1,152 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #efdc0a;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+}
+
+.body {
+    background-color: #fff89a;
+    width: 70vw;
+    height: 100vh;
+    max-width: 500px;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow-y: scroll;
+}
+
+.btn {
+    width: 100px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.form {
+    height: 40vh;
+    width: 60vh;
+    max-width: 400px; /* ✅ Add max-width */
+    background-color: rgb(33, 33, 32);
+    position: absolute;
+    top: 30%;
+    z-index: 2;
+    color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem; /* ✅ Add padding */
+    border-radius: 8px; /* ✅ So it matches style */
+}
+
+.What, .When, .Time {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+label {
+    margin-right: 10px;
+    white-space: nowrap;
+    font-size: 1rem; /* ✅ */
+}
+
+.input1, .input2, .input3 {
+    height: 30px;
+    width: 160px;
+    padding: 5px;
+    font-size: 0.9rem; /* ✅ */
+}
+
+.cont {
+    margin-bottom: 35px;
+}
+
+.submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 5px;
+    height: 40px;
+    width: 80%;
+    background-color: #ffd700;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.task {
+    color: black;
+    font-weight: bold;
+    margin-top: 6px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.checkbox {
+    margin: 5px;
+}
+
+/* ✅ RESPONSIVENESS */
+@media (max-width: 600px) {
+    .body {
+        width: 90vw;
+        padding: 1rem;
+    }
+
+    .form {
+        width: 90vw;
+        height: 50vh;
+        top: 25%;
+    }
+
+    .input1, .input2, .input3 {
+        width: 120px;
+    }
+
+    label {
+        font-size: 0.9rem;
+    }
+
+    .submit {
+        height: 35px;
+        font-size: 0.9rem;
+    }
+
+    .task {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .input1, .input2, .input3 {
+        width: 100px;
+    }
+
+    .form {
+        padding: 0.5rem;
+    }
+
+    .submit {
+        width: 90%;
+    }
+}
